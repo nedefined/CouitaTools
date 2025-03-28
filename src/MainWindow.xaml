@@ -1,0 +1,24 @@
+﻿<adonisControls:AdonisWindow x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:adonisUi="clr-namespace:AdonisUI;assembly=AdonisUI"
+        xmlns:adonisControls="clr-namespace:AdonisUI.Controls;assembly=AdonisUI"                     
+        xmlns:local="clr-namespace:CouitaTools"
+        mc:Ignorable="d"
+        Title="" Height="340" Width="700" Background="#FF2A2B34" ResizeMode="NoResize" IconVisibility="Collapsed" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button Content="Разблокировка системы" HorizontalAlignment="Center" Margin="0,73,0,0" VerticalAlignment="Top" Width="400" Click="Unlock_Click"/>
+        <Button Content="Загрузить и запустить программу по URL" HorizontalAlignment="Center" Margin="0,205,0,0" VerticalAlignment="Top" Width="400" Click="Downloader_Click"/>
+        <Label Content="CouitaTools Pro" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="16" Opacity="0.8" Foreground="#FF6074A4" />
+        <Button Content="Вспомогательные утилиты" HorizontalAlignment="Center" Margin="0,139,0,0" VerticalAlignment="Top" Width="400" Click="Tools_Click"/>
+        <Button Content="О программе" HorizontalAlignment="Center" Margin="0,234,0,0" VerticalAlignment="Top" Width="400" Click="About_Click"/>
+        <Label Content="Разблокировка ограничений" HorizontalAlignment="Center" Margin="0,36,0,0" VerticalAlignment="Top" Foreground="#FFA1ADCA" FontSize="14"/>
+        <Label Content="Выполним поиск и обезвреживание опасных блокировок." HorizontalAlignment="Center" Margin="0,55,0,0" VerticalAlignment="Top" Foreground="#FF7B808E" FontSize="10"/>
+        <Label Content="Вспомогательные утилиты" HorizontalAlignment="Center" Margin="0,102,0,0" VerticalAlignment="Top" Foreground="#FFA1ADCA" FontSize="14"/>
+        <Label Content="Безопасно запустим все необходимые для работы утилиты." HorizontalAlignment="Center" Margin="0,121,0,0" VerticalAlignment="Top" Foreground="#FF7B808E" FontSize="10"/>
+        <Label Content="Загрузка и запуск программ по URL" HorizontalAlignment="Center" Margin="0,168,0,0" VerticalAlignment="Top" Foreground="#FFA1ADCA" FontSize="14"/>
+        <Label Content="Используя сложные технологии, обойдём блокировки вирусов, загрузим необходимую программу и запустим её." HorizontalAlignment="Center" Margin="0,187,0,0" VerticalAlignment="Top" Foreground="#FF7B808E" FontSize="10"/>
+    </Grid>
+</adonisControls:AdonisWindow>
