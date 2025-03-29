@@ -26,9 +26,7 @@ namespace CouitaTools
             {
                 await DownloadFileAsync(url);
             }
-            catch (Exception ex)
-            {
-            }
+            catch (Exception ex) { }
         }
 
         private async Task DownloadFileAsync(string url)
@@ -56,9 +54,7 @@ namespace CouitaTools
             {
                 Process.Start(processStartInfo);
             }
-            catch (Exception ex)
-            {
-            }
+            catch (Exception ex) { }
         }
 
         private void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)

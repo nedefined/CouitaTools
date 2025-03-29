@@ -63,7 +63,7 @@ namespace CouitaTools
             };
 
             double progressStep = 100.0 / registryChanges.Count;
-            ProgressBar1.Value = 0;
+            ProgressBar.Value = 0;
 
             Task.Run(() =>
             {
@@ -76,16 +76,14 @@ namespace CouitaTools
                             DeleteRegistryValue(entry.Key, entry.ValueName);
                         }
                     }
-                    catch (Exception ex)
-                    {
-                    }
+                    catch (Exception ex) { }
                     finally
                     {
                         Dispatcher.Invoke(() =>
-                            ProgressBar1.Value += progressStep);
+                            ProgressBar.Value += progressStep);
                     }
                 }
-                Dispatcher.Invoke(() => ProgressBar1.Value = 100);
+                Dispatcher.Invoke(() => ProgressBar.Value = 100);
             });
         }
 
@@ -111,9 +109,7 @@ namespace CouitaTools
                     process.WaitForExit();
                 }
             }
-            catch (Exception ex)
-            {
-            }
+            catch (Exception ex) { }
         }
     }
 }

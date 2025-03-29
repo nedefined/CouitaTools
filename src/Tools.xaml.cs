@@ -20,9 +20,7 @@ namespace CouitaTools
             {
                 Process.Start(exePath);
             }
-            catch (Exception ex)
-            {
-            }
+            catch (Exception ex) { }
         }
 
         private void PE_Click(object sender, RoutedEventArgs e)
@@ -32,9 +30,7 @@ namespace CouitaTools
             {
                 Process.Start(exePath);
             }
-            catch (Exception ex)
-            {
-            }
+            catch (Exception ex) { }
         }
 
         private void PM_Click(object sender, RoutedEventArgs e)
@@ -94,10 +90,7 @@ namespace CouitaTools
             {
                 Process.Start(exePath);
             }
-            catch (Exception ex)
-            {
-
-            }
+            catch (Exception ex) { }
         }
 
         private void AutoLogger_Click(object sender, RoutedEventArgs e)
@@ -107,10 +100,7 @@ namespace CouitaTools
             {
                 Process.Start(exePath);
             }
-            catch (Exception ex)
-            {
-
-            }
+            catch (Exception ex) { }
         }
     }
 }
