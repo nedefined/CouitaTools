@@ -1,4 +1,4 @@
-﻿<adonisControls:AdonisWindow x:Class="Tools"
+﻿<adonisControls:AdonisWindow x:Class="CouitaTools.Tools"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -9,15 +9,15 @@
         mc:Ignorable="d"
         Title="" Height="340" Width="800" Background="#FF2A2B34" ResizeMode="NoResize" IconVisibility="Collapsed" WindowStartupLocation="CenterScreen" Topmost="True" PlaceTitleBarOverContent="True">
     <Grid>
-        <Button Content="TCPView" HorizontalAlignment="Left" Margin="164,161,0,0" VerticalAlignment="Top" Width="114" Click="TCP_Click"/>
-        <Button Content="Process Hacker 2" HorizontalAlignment="Left" Margin="165,95,0,0" VerticalAlignment="Top" Width="114" Click="SyIn_Click"/>
-        <Button Content="Process Explorer" HorizontalAlignment="Left" Margin="284,95,0,0" VerticalAlignment="Top" Width="114" Click="PrEx_Click" RenderTransformOrigin="0.625,0.491"/>
-        <Button Content="Process Monitor" HorizontalAlignment="Left" Margin="403,95,0,0" VerticalAlignment="Top" Width="232" Click="SyMo_Click"/>
-        <Button Content="Explorer++" HorizontalAlignment="Left" Margin="402,161,0,0" VerticalAlignment="Top" Width="114" Click="Expl_Click"/>
-        <Button Content="TotalRegistry" HorizontalAlignment="Center" Margin="0,227,0,0" VerticalAlignment="Top" Width="470" Click="ToRe_Click"/>
+        <Button Content="TCPView" HorizontalAlignment="Left" Margin="164,161,0,0" VerticalAlignment="Top" Width="114" Click="TCPView_Click"/>
+        <Button Content="Process Hacker 2" HorizontalAlignment="Left" Margin="165,95,0,0" VerticalAlignment="Top" Width="114" Click="PH2_Click"/>
+        <Button Content="Process Explorer" HorizontalAlignment="Left" Margin="284,95,0,0" VerticalAlignment="Top" Width="114" Click="PE_Click" RenderTransformOrigin="0.625,0.491"/>
+        <Button Content="Process Monitor" HorizontalAlignment="Left" Margin="403,95,0,0" VerticalAlignment="Top" Width="232" Click="PM_Click"/>
+        <Button Content="Explorer++" HorizontalAlignment="Left" Margin="402,161,0,0" VerticalAlignment="Top" Width="114" Click="EPP_Click"/>
+        <Button Content="TotalRegistry" HorizontalAlignment="Center" Margin="0,227,0,0" VerticalAlignment="Top" Width="470" Click="TR_Click"/>
         <Button Content="AVZ 5" HorizontalAlignment="Center" Margin="0,293,0,0" VerticalAlignment="Top" Width="470" Click="AVZ_Click"/>
-        <Button Content="AutoRuns" HorizontalAlignment="Left" Margin="521,161,0,0" VerticalAlignment="Top" Width="114" Click="AURU_Click"/>
-        <Button Content="AutoLogger" HorizontalAlignment="Left" Margin="283,161,0,0" VerticalAlignment="Top" Width="114" Click="AULO_Click"/>
+        <Button Content="AutoRuns" HorizontalAlignment="Left" Margin="521,161,0,0" VerticalAlignment="Top" Width="114" Click="AutoRun_Click"/>
+        <Button Content="AutoLogger" HorizontalAlignment="Left" Margin="283,161,0,0" VerticalAlignment="Top" Width="114" Click="AutoLogger_Click"/>
         <Label Content="Вспомогательные утилиты" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="#FF6074A4" FontSize="18" Opacity="0.85"/>
         <Label Content="Выберите нужную утилиту, и мы позаботимся о её безопасном запуске." HorizontalAlignment="Center" Margin="0,34,0,0" VerticalAlignment="Top" FontSize="11" FontWeight="Bold" Foreground="#FF7683A9"/>
         <Label Content="Управление выполняющимися задачами." HorizontalAlignment="Center" Margin="0,58,0,0" VerticalAlignment="Top" FontSize="13" Foreground="#FFA1ADCA"/>

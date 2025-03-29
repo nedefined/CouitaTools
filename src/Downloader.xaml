@@ -1,4 +1,4 @@
-﻿<adonisControls:AdonisWindow x:Class="Downloader"
+﻿<adonisControls:AdonisWindow x:Class="CouitaTools.Downloader"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -12,10 +12,10 @@
         Height="195" Width="600" Background="#FF2A2B34" 
         TitleBarBackground="Transparent" Title="" Foreground="Transparent" ResizeMode="NoResize" IconVisibility="Collapsed" WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBox adonisExtensions:WatermarkExtension.Watermark="Введите URL" x:Name="TextBlock1"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,43,0,0" TextWrapping="Wrap" Width="350" Text="" BorderBrush="#FF47475D"/>
+        <TextBox adonisExtensions:WatermarkExtension.Watermark="Введите URL" x:Name="Text"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,43,0,0" TextWrapping="Wrap" Width="350" Text="" BorderBrush="#FF47475D"/>
         <Label Content="Загрузка и запуск ПО из интернета." HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Opacity="0.55" Foreground="#FF6074A4"/>
         <Button Content="Download" HorizontalAlignment="Center" Margin="0,72,0,0" VerticalAlignment="Top" Width="300" Click="Download_Click"/>
-        <ProgressBar x:Name="ProgressBar1" HorizontalAlignment="Center" Height="15" Margin="0,119,0,0" VerticalAlignment="Top" Width="350" BorderBrush="#FF313131" Background="#FF353540" LargeChange="0"/>
+        <ProgressBar x:Name="ProgressBar" HorizontalAlignment="Center" Height="15" Margin="0,119,0,0" VerticalAlignment="Top" Width="350" BorderBrush="#FF313131" Background="#FF353540" LargeChange="0"/>
         <Label Content="Нажмите кнопку, и мы выполним загрузку и запуск программы с использованием современных технологий." HorizontalAlignment="Center" Margin="0,26,0,0" VerticalAlignment="Top" Foreground="#FF7683A9" FontSize="9" Visibility="Visible"/>
     </Grid>
 </adonisControls:AdonisWindow>

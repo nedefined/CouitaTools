@@ -1,4 +1,4 @@
-﻿<adonisControls:AdonisWindow x:Class="About"
+﻿<adonisControls:AdonisWindow x:Class="CouitaTools.About"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -12,7 +12,7 @@
         <Button Content="Telegram" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Width="160" Click="TG_Click"/>
         <Button Content="Github" HorizontalAlignment="Left" Margin="180,57,0,0" VerticalAlignment="Top" Width="160" Click="GH_Click"/>
         <Label Content="CouitaTools Pro" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF6074A4" FontSize="16"/>
-        <Label Content="Версия: 2.0a" HorizontalAlignment="Left" Margin="116,31,0,0" VerticalAlignment="Top" Height="12" Foreground="#FF7683A9" FontSize="10"/>
+        <Label Content="Версия: 2.0a by @nedefined" HorizontalAlignment="Left" Margin="116,31,0,0" VerticalAlignment="Top" Height="12" Foreground="#FF7683A9" FontSize="10" Width="158"/>
 
     </Grid>
 </adonisControls:AdonisWindow>
