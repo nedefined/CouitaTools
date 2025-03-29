@@ -25,6 +25,8 @@ namespace CouitaTools
                 ("HKCU:\\Software\\Policies\\Microsoft\\MMC", "RestrictToPermittedSnapins", 0),
                 ("HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System", "DisableTaskMgr", 0),
                 ("HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer", "NoFolderOptions", 0),
+                ("HKLM\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\PhishingFilter", "EnabledV9", 0),
+                ("HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System", "HideFastSwitching", 0),
                 ("HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\ActiveDesktop", "NoChangingWallPaper", 0),
                 ("HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer", "NoWinKeys", 0),
                 ("HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System", "DisableChangePassword", 0),

