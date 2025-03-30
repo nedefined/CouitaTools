@@ -40,7 +40,10 @@ gh auth login
 ```shell
 gh repo clone nedefined/CouitaTools
 ```
-
+После этого переходим в нужную папку:
+```
+cd CouitaTools/src
+```
 ### 2. Восстановление зависимостей
 **Автоматически** при открытии решения в Visual Studio, или:
 ```shell
